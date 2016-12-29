@@ -1,19 +1,17 @@
-/**
- * Created by Le on 1/11/2016.
- */
+
 
 var cartApp = angular.module ("cartApp", []);
 
 cartApp.controller("cartCtrl", function ($scope, $http){
 
     $scope.refreshCart = function () {
-        $http.get('/fashiongyrl/rest/cart/'+$scope.cartId).success(function (data) {
+        $http.get('/BloomyzBotique/rest/cart/'+$scope.cartId).success(function (data) {
            $scope.cart=data;
         });
     };
 
    $scope.clearCart = function () {
-        $http.put('/fashiongyrl/rest/cart/'+$scope.cartId).success(function (data) {
+        $http.put('/BloomyzBotique/rest/cart/'+$scope.cartId).success(function (data) {
             $scope.refreshCart();
     });
    };
@@ -24,13 +22,13 @@ cartApp.controller("cartCtrl", function ($scope, $http){
     };
 
     $scope.addToCart = function addToCart(productId) {
-        $http.put('/fashiongyrl/rest/cart/add/'+productId).success(function () {
+        $http.put('/BloomyzBotique/rest/cart/add/'+productId).success(function () {
             alert("Product successfully added to the cart!")
         });
     };
 
     $scope.removeFromCart = function (productId) {
-        $http.put('/fashiongyrl/rest/cart/remove/'+productId).success(function (data) {
+        $http.put('/BloomyzBotique/rest/cart/remove/'+productId).success(function (data) {
             $scope.refreshCart();
         });
     };

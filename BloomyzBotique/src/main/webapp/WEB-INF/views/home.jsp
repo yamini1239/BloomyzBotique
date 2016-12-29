@@ -32,7 +32,7 @@
         </div>
         <div class="item">
             <img class="second-slide home-image" width="300" height="150"
-                 src="<c:url value="/resource/images/image2.jpg" />"
+                 src="<c:url value="/resources/images/image2.jpg" />"
                  alt="Second slide">
 
             <div class="container">
@@ -54,7 +54,7 @@
         </div>
         <div class="item">
             <img class="fourth-slide home-image" width="300" height="150"
-                 src="<c:url value="/resources/img4.jpg" />"
+                 src="<c:url value="/resources/images/img4.jpg" />"
                  alt="fourth slide">
 
             <div class="container">
@@ -83,7 +83,7 @@
     <div class="col-lg-4">  
   <h2>WEDDINGSPECIAL</h2>
   <p>The dresses are very colorful and easy to wash</p>
-   <a class="btn btn-default" href="<c:url value="/productList?searchCondition=$" />" target="_blank">            
+   <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=$" />" target="_blank">            
   <img class="img-circle" width="140" height="140"
                  src="<c:url value="/resources/images/thumb 1.jpg" />"
                  alt="weddingspecial">
@@ -105,7 +105,7 @@
 <div class="container">
 <div class="col-lg-4">
   <h2>WESTERNWEAR</h2>
-  <p>Stroller's are too good in quality </p> 
+  <p>the styles you deserve</p> 
   <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=$" />" target="_blank">            
  <img class="img-circle" width="140" height="140"
                  src="<c:url value="/resources/images/thumb2.jpg" />"

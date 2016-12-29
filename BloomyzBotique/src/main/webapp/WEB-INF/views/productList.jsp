@@ -27,12 +27,12 @@
         <table class="table table-striped table-hover">
             <thead>
             <tr class="bg-success">
-                <th>Photo Thumb</th>
+                <th>Product Image</th>
                 <th>Product Name</th>
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
-                 <th> unitstock</th>
+                <th></th>
             </tr>
             </thead>
             <c:forEach items="${products}" var="product">
@@ -42,10 +42,9 @@
                     <td>${product.productName}</td>
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
-                    <td>${product.productPrice}</td>
-                    <td><a href="<spring:url value="/product/${product.productId}" />"
-                    ></a>
-                    </td>
+                    <td>${product.productPrice} RS</td>
+                    <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
+                    ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>
             </c:forEach>
         </table>

@@ -10,8 +10,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>BLOOMYZBOTIQUE</title>
-
+    <title>BloomyzBotique</title>
+      <script src="<c:url value="/resources/js/controller.js" /> "></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -31,7 +32,7 @@
 <nav class="navbar navbar-inverse w3-blue">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">BLOOMYZBOTIQUE</a>
+      <a class="navbar-brand" href="#">BloomyzBotique</a>
     </div>
     <ul class="nav navbar-nav ">
       <li><a class="w3-hover-purple" href="<c:url value="/" /> ">Home</a></li>
@@ -46,6 +47,9 @@
                                 <li><a href="<c:url value="/admin" />">Admin</a></li>
                             </c:if>
                         </c:if>
+                        <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                                <li><a class="w3-hover-pink" href="<c:url value="/customer/cart"/>">Cart</a></li>
+                            </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name  == null}">
                         <li><a class="w3-hover-pink" href="<c:url value="/login/" />">Login</a></li>
                         <li><a class="w3-hover-orange" href="<c:url value="/register" />">Sign-Up</a></li>

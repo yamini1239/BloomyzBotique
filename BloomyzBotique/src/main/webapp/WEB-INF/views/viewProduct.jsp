@@ -1,5 +1,6 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
 
@@ -17,8 +18,6 @@
                 <div class="col-md-5">
                     <img src="<c:url value="/resources/images/${product.productId}.png" /> " alt="image"
                              style="width:100%"/>
-                </div>
-                </div>
                 </div>
 
                 <div class="col-md-5">

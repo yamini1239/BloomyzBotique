@@ -25,10 +25,10 @@ $(document).ready(function(){
             <p class="lead">This is the product inventory page!</p>
         </div>
 
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-blue">
             <thead>
             <tr class="success">
-                <th>Photo Thumb</th>
+                <th>Product image</th>
                 <th>Product Name</th>
                 <th>Category</th>
                 <th>Condition</th>
@@ -45,13 +45,13 @@ $(document).ready(function(){
                     <td>${product.productName}</td>
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
-                    <td>${product.productPrice} USD</td>
+                    <td>${product.productPrice} RS</td>
                     <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
-                    ><span class="glyphicon glyphicon-sunglasses"></span></a>
-                        <a href="<spring:url value="/admin/deleteProduct/${product.productId}" />"
-                        ><span class="glyphicon glyphicon-scissors"></span></a>
+                    ><span class="glyphicon glyphicon-info-sign"></span></a>
+                        <a href="<spring:url value="/admin/product/deleteProduct/${product.productId}" />"
+                        ><span class="glyphicon glyphicon-remove"></span></a>
                         <a href="<spring:url value="/admin/product/editProduct/${product.productId}" />"
-                        ><span class="glyphicon glyphicon-edit"></span></a>
+                        ><span class="glyphicon glyphicon-pencil"></span></a>
                     </td>
                 </tr>
                 </c:forEach>
@@ -61,5 +61,8 @@ $(document).ready(function(){
         </div>
         </div>
         </div>
-<a href="<spring:url value="/product/addProduct" />" class="btn btn-primary">Add Product</a>
+        
+
+        <a href="<spring:url value="/admin/product/addProduct" />" class="btn btn-primary">Add Product</a>
+
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
